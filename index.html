@@ -108,6 +108,9 @@
       <button class="nav-btn active" data-tab="hints">[ HINTS ]</button>
       <button class="nav-btn" data-tab="buffs">[ BUFFS ]</button>
       <button class="nav-btn" data-tab="mystery">[ MYSTERY ]</button>
+      <button class="nav-btn" data-tab="inventory">[ INVENTORY ]</button>
+      <button class="nav-btn" data-tab="mystery_history">[ MYSTERY HISTORY ]</button>
+      <button class="nav-btn" data-tab="activity">[ ACTIVITY ]</button>
     </div>
     
     <div class="hub-content" id="hub-content-area">
@@ -145,11 +148,24 @@
         <span>TEAM:</span>
         <select id="debug-team-select" style="background:#0d1217; color:#00ffaa; border:1px solid #00ffaa;">
             <option value="TEAM_01">TEAM_01</option>
+            <option value="TEAM_02">TEAM_02</option>
             <option value="TEAM_07" selected>TEAM_07</option>
             <option value="TEAM_14">TEAM_14</option>
         </select>
     </div>
+    <div class="debug-row">
+      <input type="number" id="debug-money-input" placeholder="Set Money" style="width:70px; background:#0d1217; color:#fff; border:1px solid #555; padding:2px;">
+      <button id="debug-set-money" class="ui-btn" style="padding:2px 5px; font-size:9px; min-width: auto;">SET</button>
+    </div>
+    <div class="debug-row">
+      <input type="number" id="debug-inflation-input" placeholder="Set Market %" step="0.1" style="width:70px; background:#0d1217; color:#fff; border:1px solid #555; padding:2px;">
+      <button id="debug-set-inflation" class="ui-btn" style="padding:2px 5px; font-size:9px; min-width: auto;">SET</button>
+    </div>
     <button id="debug-reset-team" class="ui-btn" style="margin-top: 5px; padding: 2px; font-size: 9px; min-width: auto; width: 100%;">RESET TEAM STATE</button>
+    <div class="debug-row highlight"><span>--- Admin Log ---</span></div>
+    <div id="debug-event-log" style="font-size: 9px; max-height: 100px; overflow-y: auto; background: rgba(0,0,0,0.8); border: 1px solid #555; padding: 5px; color: #aaa; margin-top: 5px; display: flex; flex-direction: column; gap: 4px; word-break: break-all;">
+      <!-- Events go here -->
+    </div>
   </div>
 
   <script src="js/config.js"></script>
